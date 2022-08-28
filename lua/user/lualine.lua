@@ -43,6 +43,12 @@ local branch = {
 	icon = "",
 }
 
+local filename = {
+	"filename",
+	icons_enabled = true,
+	icon = "",
+}
+
 local location = {
 	"location",
 	padding = 0,
@@ -72,7 +78,7 @@ lualine.setup({
 		always_divide_middle = true,
 	},
 	sections = {
-		lualine_a = { branch, diagnostics },
+		lualine_a = { branch, diagnostics, filename },
 		lualine_b = { mode },
 		lualine_c = {},
 		-- lualine_x = { "encoding", "fileformat", "filetype" },
