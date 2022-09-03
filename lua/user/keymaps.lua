@@ -35,9 +35,6 @@ keymap("n", "<C-l>", "<CMD>NavigatorRight<CR>", opts)
 keymap("n", "<leader>v", ":vsp<CR><C-w>l", opts)
 keymap("n", "<leader>h", ":noh<CR>", opts)
 
--- Other
-keymap("n", "<C-p>", ":Telescope find_files<CR>", opts)
-
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
@@ -45,8 +42,8 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
--- keymap("n", "<S-l>", ":bnext<CR>", opts)
--- keymap("n", "<S-h>", ":bprevious<CR>", opts)
+--[[ keymap("n", "<S-l>", ":bnext<CR>", opts) ]]
+--[[ keymap("n", "<S-h>", ":bprevious<CR>", opts) ]]
 
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
@@ -82,4 +79,5 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Telescope commands
 -- keymap("n", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
-
+keymap("n", "<C-p>", ":Telescope find_files<CR>", opts)
+keymap("n", "<leader>f", ":Telescope grep_string<CR>", term_opts)
