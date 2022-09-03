@@ -64,4 +64,4 @@ sudo make install
 nvim -v
 ```
 
-There's some issue with tree sitter PHP that I used this issue to solve https://github.com/claytonrcarter/tree-sitter-phpdoc/issues/15 
+There's some issue with tree sitter PHP that I used this issue to solve https://github.com/claytonrcarter/tree-sitter-phpdoc/issues/15, although later commits (09/02/2022) deal with this by telling treesitter to ignore the bad dependency.
