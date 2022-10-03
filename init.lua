@@ -4,9 +4,11 @@ require "user.plugins"
 require "user.colorscheme"
 require "user.cmp"
 require "user.lsp"
+--[[ require "user.coc" ]]
 require "user.telescope"
 require "user.treesitter"
 require "user.treesitter-context"
+-- require "user.rust-tools"
 --[[ require "user.autopairs" ]]
 require "user.comment"
 -- require "user.gitsigns"

@@ -34,6 +34,7 @@ keymap("n", "<C-l>", "<CMD>NavigatorRight<CR>", opts)
 -- Leader key bindings
 keymap("n", "<leader>v", ":vsp<CR><C-w>l", opts)
 keymap("n", "<leader>h", ":noh<CR>", opts)
+--[[ keymap("n","<leader>f", ':silent grep! "" | cwindow | redraw!<S-left><S-left><S-left><S-left><left><left>', opts) ]]
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)

@@ -83,13 +83,29 @@ return packer.startup(function(use)
 	use({ "L3MON4D3/LuaSnip", commit = "79b2019c68a2ff5ae4d732d50746c901dd45603a" }) --snippet engine
 	use({ "rafamadriz/friendly-snippets", commit = "d27a83a363e61009278b6598703a763ce9c8e617" }) -- a bunch of snippets to use
 
-	-- LSP
+	-- LSPuse
+  --[[ use ({'neoclide/coc.nvim', branch = 'release'}) ]]
+  use({ "williamboman/mason.nvim" })
 	use({ "neovim/nvim-lspconfig", commit = "148c99bd09b44cf3605151a06869f6b4d4c24455" }) -- enable LSP
 	use({ "williamboman/nvim-lsp-installer", commit = "e9f13d7acaa60aff91c58b923002228668c8c9e6" }) -- simple to use language server installer
 	use({ "jose-elias-alvarez/null-ls.nvim", commit = "ff40739e5be6581899b43385997e39eecdbf9465" }) -- for formatters and linters
+  use {
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+    config = function()
+      require("trouble").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  }
+  use({ "simrat39/rust-tools.nvim" })
+  use({ "rvmelkonian/move.vim" })
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim", commit = "d96eaa914aab6cfc4adccb34af421bdd496468b0" })
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 
 	-- Treesitter
 	use({ "nvim-treesitter/nvim-treesitter" })
@@ -101,8 +117,11 @@ return packer.startup(function(use)
   -- Regular VIM plugins
 	use({ "tpope/vim-vinegar" })
 	use({ "tpope/vim-fugitive" })
+	use({ "tpope/vim-repeat" })
+	use({ "tpope/vim-unimpaired" })
 	use({ "markonm/traces.vim" })
   use({ "numToStr/Navigator.nvim" })
+  use {'jdhao/whitespace.nvim', event = 'VimEnter'}
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

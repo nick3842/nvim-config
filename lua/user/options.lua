@@ -25,7 +25,6 @@ local options = {
   shiftwidth = 2,                          -- the number of spaces inserted for each indentation
   tabstop = 2,                             -- insert 2 spaces for a tab
   cursorline = true,                       -- highlight the current line
-  number = false,                           -- set numbered lines
   relativenumber = true,                  -- set relative numbered lines
   nu = true,
   numberwidth = 4,                         -- set number column width to 2 {default 4}

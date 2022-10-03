@@ -1,0 +1,9 @@
+{
+"languageserver": {
+    "move": {
+      "command": "move-analyzer",
+      "filetypes": ["move"]
+    }
+  }
+
+  }
