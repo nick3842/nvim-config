@@ -7,6 +7,7 @@ vim.cmd [[
     autocmd FileType qf set nobuflisted
   augroup end
 
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
   augroup _git
     autocmd!
     autocmd FileType gitcommit setlocal wrap
@@ -28,8 +29,8 @@ vim.cmd [[
     autocmd!
     autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
   augroup end
-]]
 
+]]
 -- Autoformat
 -- augroup _lsp
 --   autocmd!
