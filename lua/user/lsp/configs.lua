@@ -9,6 +9,7 @@ local servers = {
   "jsonls",
   "sumneko_lua",
   "tsserver",
+  "gopls",
 }
 
 lsp_installer.setup({
