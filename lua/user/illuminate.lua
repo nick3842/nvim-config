@@ -28,6 +28,7 @@ illuminate.configure {
     "toggleterm",
     "DressingSelect",
     "TelescopePrompt",
+    "netrw",
   },
   filetypes_allowlist = {},
   modes_denylist = {},
