@@ -88,3 +88,6 @@ keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 
 -- Lsp
 keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
+
+-- Leader
+keymap("n", "<leader>us", "iconst [foo, setFoo] = useState('')<ESC>:S/foo//g<left><left>", opts)
