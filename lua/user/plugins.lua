@@ -89,6 +89,7 @@ return packer.startup(function(use)
 	use({ "tpope/vim-fugitive" })
 	use({ "tpope/vim-vinegar" })
 	use({ "tpope/vim-repeat" })
+	use({ "tpope/vim-abolish" })
   use({ "numToStr/Navigator.nvim" })
 	use({ "kylechui/nvim-surround" ,
     tag = "*",
