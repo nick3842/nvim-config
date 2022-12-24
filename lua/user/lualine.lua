@@ -33,6 +33,11 @@ local filename = {
   padding = 1,
 }
 
+local branch = {
+  "branch",
+  color={fg='#a7c080'}
+}
+
 local location = {
   "location",
   padding = 0,
@@ -54,7 +59,7 @@ lualine.setup {
   },
   sections = {
     lualine_a = { "mode" },
-    lualine_b = {"branch", diagnostics},
+    lualine_b = { branch, diagnostics},
     lualine_c = { filename },
     lualine_x = { diff, spaces, "encoding", filetype },
     lualine_y = { location },
