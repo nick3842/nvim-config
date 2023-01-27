@@ -35,7 +35,7 @@ local filename = {
 
 local branch = {
   "branch",
-  color={fg='#a7c080'}
+  -- color={fg='#a7c080'}
 }
 
 -- local location = {

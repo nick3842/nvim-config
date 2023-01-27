@@ -1,18 +1,41 @@
--- local colorscheme = "tokyonight-night"
---
--- local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
--- if not status_ok then
---   return
--- end
-vim.cmd [[
-try
-  let g:everforest_background = 'medium'
-  let g:everforest_better_performance = 1
-  let g:everforest_diagnostic_virtual_text = "colored"
-  let g:everforest_ui_contrast = 'high'
-  colorscheme everforest
-catch /^Vim\%((\a\+)\)\=:E185/
-  colorscheme default
-  set background=dark
-endtry
-]]
+-- everforest config -----------------------------------
+-- vim.cmd [[
+-- try
+--   let g:everforest_background = 'medium'
+--   let g:everforest_better_performance = 1
+--   let g:everforest_diagnostic_virtual_text = "colored"
+--   let g:everforest_ui_contrast = 'high'
+--   let g:everforest_enable_italic = 1
+--   let g:everforest_diagnostic_line_highlight = 1
+--   colorscheme everforest
+-- catch /^Vim\%((\a\+)\)\=:E185/
+--   colorscheme default
+--   set background=dark
+-- endtry
+-- ]]
+-- everforest config -----------------------------------
+
+-- kanagawa config -----------------------------------
+require('kanagawa').setup({
+    undercurl = true,           -- enable undercurls
+    commentStyle = { italic = true },
+    functionStyle = {},
+    keywordStyle = { italic = true, bold = false },
+    statementStyle = { bold = true },
+    typeStyle = {},
+    variablebuiltinStyle = { italic = true},
+    specialReturn = true,       -- special highlight for the return keyword
+    specialException = true,    -- special highlight for exception handling keywords
+    transparent = false,        -- do not set background color
+    dimInactive = false,        -- dim inactive window `:h hl-NormalNC`
+    globalStatus = true,       -- adjust window separators highlight for laststatus=3
+    terminalColors = true,      -- define vim.g.terminal_color_{0,17}
+    colors = {},
+    overrides = {
+      CursorLineNr = { bold = false },
+      Todo = { bg = "#FFA066", }
+    },
+    theme = "default"           -- Load "default" theme or the experimental "light" theme
+})
+vim.cmd('colorscheme kanagawa')
+-- kanagawa config -----------------------------------
