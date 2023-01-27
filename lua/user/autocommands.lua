@@ -18,7 +18,7 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 
 vim.cmd("autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif")
 
-vim.cmd([["au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif"]])
+vim.cmd([[autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif]])
 
 vim.api.nvim_create_autocmd({ "VimResized" }, {
 	callback = function()
