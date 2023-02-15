@@ -99,6 +99,9 @@ return packer.startup(function(use)
     end
   })
 
+  -- MISC
+  use {'jdhao/whitespace.nvim', event = 'VimEnter'}
+
   -- Telescope
   use { "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" }
 
