@@ -25,6 +25,7 @@ vim.opt.shiftwidth = 2                          -- the number of spaces inserted
 vim.opt.tabstop = 2                             -- insert 2 spaces for a tab
 vim.opt.cursorline = true                       -- highlight the current line
 vim.opt.colorcolumn = "80"                       -- add marker for 80 characters
+vim.opt.hidden = false                       -- dont let me change buffers without saving
 -- vim.opt.number = true                           -- set numbered lines
 vim.opt.relativenumber = true                  -- set relative numbered lines
 vim.opt.nu = true                  -- set relative numbered lines
