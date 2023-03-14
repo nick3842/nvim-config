@@ -94,3 +94,4 @@ keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opt
 
 -- Leader
 keymap("n", "<leader>us", "iconst [foo, setFoo] = useState('')<ESC>:S/foo//g<left><left>", opts)
+keymap("n", "<leader>p", "$p", opts)
